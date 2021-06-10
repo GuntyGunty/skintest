@@ -1,7 +1,22 @@
-import { fail, pass, TestResult } from '@skintest/sdk';
+import { fail, has, I, pass, perform, Recipe, recipe, TestResult } from '@skintest/sdk';
 import * as fs from 'fs';
 import * as path from 'path';
 import { data } from '../project/data';
+import { grid } from './grid.view';
+
+/**
+ * waits until grid has some rows
+ * 
+ * @returns recipe
+ */
+export async function wait_until_grid_has_rows(): Promise<Recipe> {
+  return recipe(
+    perform('wait for the first grid row'
+      , I.wait(grid.row_at(0), has.state, 'visible')
+    )
+  );
+}
+
 
 /**
  * assert that file is not empty

@@ -1,6 +1,6 @@
 import { download, handle, I, perform, recipe, Recipe } from '@skintest/sdk';
 import * as path from 'path';
-import { grid } from '../components/grid';
+import { grid } from '../grid/grid.view';
 import { data } from '../project/data';
 
 /**

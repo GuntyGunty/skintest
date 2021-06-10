@@ -1,8 +1,7 @@
 import { feature, has, I } from '@skintest/sdk';
-import { page } from '../components/page';
-import { todos } from '../components/todos';
-import { add_todo } from '../recipes/add-todo';
-import { clear_todos } from '../recipes/clear-todos';
+import { page } from '../main/page';
+import { add_todo, clear_todos } from './todos.recipes';
+import { todos } from './todos.view';
 
 feature('todos complete')
   .before('scenario'

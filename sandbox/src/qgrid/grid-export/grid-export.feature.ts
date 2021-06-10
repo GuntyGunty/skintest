@@ -1,9 +1,8 @@
 import { feature, I } from '@skintest/sdk';
-import { example_export } from '../components/example-export';
-import { page } from '../components/page';
-import { export_data_as } from '../recipes/export-data-as';
-import { that_data_exists } from '../recipes/that-data-exists';
-import { wait_until_grid_has_rows } from '../recipes/wait-until-grid-has-rows';
+import { that_data_exists, wait_until_grid_has_rows } from '../grid/grid.recipes';
+import { page } from '../main/page';
+import { export_data_as } from './grid-export.recipes';
+import { example_export } from './grid-export.view';
 
 feature('grid export')
   .before('scenario'
@@ -16,5 +15,5 @@ feature('grid export')
     , I.do(export_data_as, 'check-export-data.csv')
     , I.test('cvs file exists and contains data')
     , I.see(that_data_exists, 'check-export-data.csv')
-    ,I.__pause()
+    , I.__pause()
   )

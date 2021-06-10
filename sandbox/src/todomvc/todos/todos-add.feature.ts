@@ -1,11 +1,8 @@
 import { feature, has, I } from '@skintest/sdk';
-import { page } from '../components/page';
-import { todos } from '../components/todos';
-import { add_todo } from '../recipes/add-todo';
-import { clear_todos } from '../recipes/clear-todos';
-import { copy_from } from '../recipes/copy-from';
-import { generate_todos } from '../recipes/generate-todos';
-import { paste_to } from '../recipes/paste-to';
+import { copy_from, paste_to } from '../clipboard/clipboard.recipes';
+import { page } from '../main/page';
+import { add_todo, clear_todos, generate_todos } from './todos.recipes';
+import { todos } from './todos.view';
 
 feature('todos add')
   .before('scenario'

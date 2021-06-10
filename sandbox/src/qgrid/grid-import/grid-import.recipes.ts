@@ -1,5 +1,5 @@
 import { fileDialog, handle, I, perform, Recipe, recipe } from '@skintest/sdk';
-import { grid } from '../components/grid';
+import { grid } from '../grid/grid.view';
 
 /**
  * waits for download completed after the click to the grid action

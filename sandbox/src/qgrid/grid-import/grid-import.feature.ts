@@ -1,9 +1,9 @@
 import { feature, has, I } from '@skintest/sdk';
-import { example_import } from '../components/example-import';
-import { grid } from '../components/grid';
-import { page } from '../components/page';
+import { grid } from '../grid/grid.view';
+import { page } from '../main/page';
 import { data } from '../project/data';
-import { import_data_from } from '../recipes/import-data-from';
+import { import_data_from } from './grid-import.recipes';
+import { example_import } from './grid-import.view';
 
 feature('grid import')
   .before('scenario'
